@@ -1,0 +1,156 @@
+/*body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image {
+    background-image: url('pic3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.blurred-box {
+    background-color: rgba(236, 236, 236, 0.7);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.accordion .accordion-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.accordion-button {
+    color: #000;
+    font-size: 1rem;
+}
+*/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url('pic3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep the background image fixed */
+}
+
+.container {
+    padding-top: 20px; /* Adjust the distance between the background image and the blurred box */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.blurred-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    margin: 0 auto; /* Adjust margin as needed */
+    padding: 20px;
+    width: 1100px; /* Adjust width as needed */
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px #c9c8c8;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Centers children vertically */
+    align-items: center; /* Centers children horizontally */
+    text-align: center; /* Ensures text is centered within its container */
+}
+
+.accordion .accordion-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.accordion-button {
+    color: #000;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+/* CSS */
+.button-86 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-86::after,
+  .button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+  }
+  
+  .button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+  }
+  
+  .button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+  
+  .button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+  
+  .button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }

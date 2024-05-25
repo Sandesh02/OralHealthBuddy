@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oral Health Buddy 🦷</title>
+<link rel="icon" href="static/iconpic.png" type="image/x-icon">
+<!--<link rel="stylesheet" href="static/css/style2.css">-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link href='https://fonts.googleapis.com/css?family=Patua One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Castoro' rel='stylesheet'>
+<style>
+    body {
+    color: black; /* Ensures text color is visible on grey background */
+    text-shadow: 1px 1px 3px white;
+    font-family: 'Patua One';font-size: 20px;
+}
+h1 {
+    font-family: 'Castoro';font-size: 55px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="background-image">
+    <div class="blurred-box" >
+        <br><br>
+        <h1>Oral Health Buddy</h1>
+        <br>
+        <h3>Click on a disease to learn more about it.</h3>
+        <br>
+        <div class="button-container" style="  display: grid; align-items: center; justify-content: center;">
+      <button class="button-86" role="button" onclick="location.href='/'" style="text-shadow: none;">Go Back Home</button>
+        </div>
+        <br>
+        <div class="accordion col-lg-10 mx-auto shadow" id="accordionExample" >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size: 70%;">
+                  Calculus
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="card-body p-5">
+<!--                  <img src="teeth/calculus.png" alt="Calculus" style="width:300px"><br><br><br>-->
+                   <img src="{{ url_for('static', filename='teeth/calculus.png') }}" alt="Calculus" style="width:300px"><br><br><br>
+                  <strong>Calculus</strong>, also known as tartar, refers to the hardened buildup of plaque on teeth caused by mineral deposits. It forms when plaque, a sticky film of bacteria, combines with minerals from saliva and hardens over time. If left untreated, calculus can lead to gum disease and other oral health issues.
+                  <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Persistent bad breath (halitosis)</li>
+                    <li>Swollen or bleeding gums</li>
+                    <li>Visible yellow or brown deposits on teeth</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Poor oral hygiene practices, such as inadequate brushing and flossing</li>
+                    <li>Consumption of sugary or acidic foods and beverages</li>
+                    <li>Infrequent dental check-ups and cleanings</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Brush teeth twice daily with fluoride toothpaste and floss daily</li>
+                    <li>Maintain a balanced diet low in sugar and high in fruits and vegetables</li>
+                    <li>Schedule regular dental check-ups and cleanings every six months</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-size: 70%;">
+                  Oral Cancer
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="card-body p-5">
+                  <img src="{{ url_for('static', filename='teeth/oral cancer.png') }}" alt="oral cancer" style="width:300px"><br><br><br>
+                  <strong>Oral cancer</strong>, a subtype of head and neck cancer, manifests as malignant growths in the oral cavity, including the lips, tongue, cheeks, and throat. It often begins as a painless sore or lesion that doesn't heal, accompanied by other symptoms such as difficulty swallowing, persistent hoarseness, or changes in the mouth's appearance. Early detection through regular dental check-ups is crucial for successful treatment and improved prognosis.
+                  <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Persistent mouth sore or ulcer that doesn't heal</li>
+                    <li>Red or white patches in the mouth</li>
+                    <li>Difficulty chewing, swallowing, or speaking</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Tobacco use, including smoking and chewing tobacco</li>
+                    <li>Excessive alcohol consumption</li>
+                    <li>Human papillomavirus (HPV) infection</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Avoid tobacco products and limit alcohol consumption</li>
+                    <li>Practice good oral hygiene and attend regular dental check-ups</li>
+                    <li>Consider vaccination against HPV, particularly for adolescents and young adults</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-size: 70%;">
+                  Caries
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="card-body p-5">
+                  <img src="{{ url_for('static', filename='teeth/caries.jpg') }}" alt="caries" style="width:300px"><br><br><br>
+
+                  <strong>Caries</strong>, commonly known as tooth decay or cavities, is a prevalent dental condition characterized by the demineralization of tooth enamel due to bacterial activity. It occurs when plaque, a sticky film of bacteria, combines with sugars from food to produce acid, which erodes tooth enamel over time. Without proper treatment, caries can progress, leading to pain, infection, and eventual tooth loss.
+                  <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Tooth sensitivity, especially to hot, cold, or sweet foods and drinks</li>
+                    <li>Visible holes or pits in the teeth</li>
+                    <li>Toothache or pain when biting down</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Poor oral hygiene practices, including inadequate brushing and flossing</li>
+                    <li>Consumption of sugary or acidic foods and beverages</li>
+                    <li>Bacterial activity in dental plaque, leading to the production of acid that damages tooth enamel</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Brush teeth twice daily with fluoride toothpaste and floss daily to remove plaque</li>
+                    <li>Limit consumption of sugary and acidic foods and drinks</li>
+                    <li>Attend regular dental check-ups and cleanings every six months</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="font-size: 70%;">
+                    Gingivitis
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="card-body p-5">
+                    <img src="{{ url_for('static', filename='teeth/gingivitis.jpg') }}" alt="gingivitis" style="width:300px"><br><br><br>
+                    <strong>Gingivitis</strong> is a common and mild form of gum disease characterized by inflammation of the gums. It occurs due to the buildup of plaque, a sticky film of bacteria, along the gumline. Without proper oral hygiene and treatment, gingivitis can progress to more severe forms of gum disease, leading to potential tooth loss.
+                    <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Swollen, tender, or red gums</li>
+                    <li>Bleeding gums, especially during brushing or flossing</li>
+                    <li>Bad breath (halitosis)</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Poor oral hygiene, including inadequate brushing and flossing</li>
+                    <li>Accumulation of plaque and tartar along the gumline</li>
+                    <li>Hormonal changes, certain medications, or underlying health conditions that affect gum health</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Maintain good oral hygiene by brushing teeth twice daily with fluoride toothpaste and flossing once daily</li>
+                    <li>Schedule regular dental check-ups and cleanings to remove plaque and tartar buildup</li>
+                    <li>Avoid smoking and maintain a healthy diet low in sugars and high in fruits and vegetables</li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="font-size: 70%;">
+                Mouth Ulcer
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/Mouth Ulcer.jpg') }}" alt="Mouth Ulcer" style="width:300px"><br><br><br>
+                <strong>Mouth ulcers</strong>, also known as canker sores, are painful lesions that develop on the mucous membranes inside the mouth. They often appear as round or oval sores with a white or yellow center and a red border. While the exact cause is not always clear, factors such as minor injury, stress, certain foods, or underlying health conditions may contribute to their development.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Pain or discomfort in the affected area of the mouth</li>
+                    <li>Round or oval-shaped sores with a white or yellow center and a red border</li>
+                    <li>Difficulty eating, drinking, or talking, especially if the ulcer is large or painful</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Minor injury to the mouth, such as accidental biting or irritation from braces or dentures</li>
+                    <li>Stress or emotional disturbances</li>
+                    <li>Certain foods or ingredients, such as acidic or spicy foods, citrus fruits, or nuts</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Practice good oral hygiene to reduce the risk of mouth injury and irritation</li>
+                    <li>Manage stress through relaxation techniques, exercise, or seeking support</li>
+                    <li>Avoid triggering foods or ingredients that may contribute to mouth ulcer development</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="font-size: 70%;">
+                Tooth Discoloration
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/tooth discoloration.jpg') }}" alt="discoloration" style="width:300px"><br><br><br>
+                <strong>Tooth discoloration</strong> refers to changes in the color of teeth, often resulting in stains or darkening of the enamel. It can occur due to various factors, including consuming certain foods and drinks, smoking, aging, or dental conditions. Treatment options for tooth discoloration range from professional teeth whitening procedures to lifestyle changes and improved oral hygiene practices.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Noticeable changes in the color of teeth, ranging from yellowish or brown stains to gray or black discoloration</li>
+                    <li>Uneven color distribution across the tooth surface</li>
+                    <li>Sensitivity to hot or cold foods and beverages, especially if the discoloration is accompanied by enamel erosion</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Consumption of staining substances like coffee, tea, red wine, and certain foods with strong pigments</li>
+                    <li>Tobacco use, including smoking or chewing tobacco, which can lead to deep stains and yellowing of teeth</li>
+                    <li>Aging, as the enamel naturally wears down over time, revealing the darker dentin layer beneath</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Practice good oral hygiene by brushing teeth twice daily with fluoride toothpaste and flossing regularly to remove surface stains and plaque buildup</li>
+                    <li>Limit intake of staining foods and beverages, or rinse mouth with water afterward to minimize contact with teeth</li>
+                    <li>Avoid smoking or tobacco use, and consider professional teeth whitening treatments to restore a brighter smile</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="font-size: 70%;">
+                Plaque
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/plaque.jpg') }}" alt="plaque" style="width:300px"><br><br><br>
+                <strong>Plaque</strong> refers to a sticky film of bacteria that forms on teeth and along the gumline. It is a primary cause of tooth decay and gum disease, as the bacteria in plaque produce acids that erode tooth enamel and irritate the gums. Regular brushing, flossing, and dental cleanings are essential for removing plaque and maintaining optimal oral health.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Visible buildup of sticky, colorless film on teeth</li>
+                    <li>Persistent bad breath (halitosis)</li>
+                    <li>Tender, swollen, or bleeding gums</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Poor oral hygiene habits, such as infrequent brushing and flossing</li>
+                    <li>Consumption of sugary or starchy foods that bacteria feed on</li>
+                    <li>Inadequate removal of food particles and bacteria from the mouth</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Brush teeth thoroughly at least twice a day with fluoride toothpaste</li>
+                    <li>Floss daily to remove plaque and food particles from between teeth and along the gumline</li>
+                    <li>Limit intake of sugary and acidic foods, and rinse mouth with water after consuming them</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" style="font-size: 70%;">
+                Hypodontia
+              </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/hypodontia.jpg') }}" alt="hypodontia" style="width:300px"><br><br><br>
+                <strong>Hypodontia</strong> is a developmental condition characterized by the absence of one or more permanent teeth. It can affect any teeth in the mouth but commonly involves the wisdom teeth, second premolars, and upper lateral incisors. Treatment options for hypodontia may include orthodontic intervention, dental implants, or prosthetic devices to restore function and aesthetics.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Gaps or spaces between teeth due to missing permanent teeth</li>
+                    <li>Crooked or misaligned teeth resulting from adjacent teeth shifting into the space</li>
+                    <li>Difficulty chewing or biting properly, especially if multiple teeth are missing</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Genetic factors and family history of dental anomalies</li>
+                    <li>Abnormalities in tooth development during fetal development</li>
+                    <li>Environmental factors or certain medical conditions that disrupt normal tooth formation</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>There are no specific ways to prevent hypodontia since it is primarily a genetic and developmental condition</li>
+                    <li>However, maintaining good oral hygiene and visiting a dentist regularly can help identify and manage any dental issues early</li>
+                    <li>Early orthodontic evaluation and treatment can help address any dental abnormalities and prevent further complications</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" style="font-size: 70%;">
+                Cavity
+              </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/cavity.jpg') }}" alt="cavity" style="width:300px"><br><br><br>
+                <strong>Cavities</strong>, also known as dental caries, are decayed areas of your teeth that result from a combination of factors including bacteria, food particles, and acidic substances. They can cause toothache, sensitivity to hot and cold, and eventually lead to tooth loss if left untreated. Prevention through regular brushing, flossing, and dental check-ups is key to maintaining oral health and keeping cavities at bay.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Toothache, especially when consuming sweet, hot, or cold foods and beverages</li>
+                    <li>Sensitivity to hot and cold temperatures</li>
+                    <li>Visible holes or pits in the teeth</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Plaque buildup on the teeth, which harbors harmful bacteria</li>
+                    <li>Consumption of sugary and acidic foods and beverages</li>
+                    <li>Poor oral hygiene practices, such as infrequent brushing and flossing</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Brush teeth at least twice a day with fluoride toothpaste</li>
+                    <li>Floss daily to remove plaque and food particles from between teeth</li>
+                    <li>Limit consumption of sugary and acidic foods and drinks, and opt for water or sugar-free alternatives whenever possible</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen" style="font-size: 70%;">
+                Fillings
+              </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/filling.jpg') }}" alt="filling" style="width:300px"><br><br><br>
+                <strong>Fillings</strong> are dental restorations used to repair teeth that have been damaged by decay or trauma. They are typically made from materials such as amalgam, composite resin, or porcelain, and are designed to restore the function and appearance of the affected tooth. Fillings help to strengthen the tooth structure, prevent further decay, and alleviate discomfort caused by cavities.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Persistent toothache or sensitivity, especially when consuming hot, cold, or sweet foods</li>
+                    <li>Visible pits, holes, or dark spots on the surface of the tooth</li>
+                    <li>Rough or uneven edges on the tooth surface, indicating decay</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Poor oral hygiene practices, allowing plaque and bacteria to accumulate and cause decay</li>
+                    <li>Consumption of sugary and acidic foods and beverages, which can erode tooth enamel and promote cavity formation</li>
+                    <li>Failure to address early signs of decay, leading to progression of cavities that require filling</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Maintain good oral hygiene habits, including brushing teeth at least twice a day and flossing daily to remove plaque and food debris</li>
+                    <li>Limit intake of sugary and acidic foods and drinks, and rinse mouth with water after consuming them</li>
+                    <li>Schedule regular dental check-ups for professional cleanings and early detection of dental issues, allowing for prompt treatment before fillings are necessary</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEleven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven" style="font-size: 70%;">
+                Impacted Tooth
+              </button>
+            </h2>
+            <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/impacted.jpg') }}" alt="impacted" style="width:300px"><br><br><br>
+                <strong>Impacted teeth</strong> occur when a tooth fails to emerge fully through the gums, often due to lack of space in the jaw or obstruction by other teeth. This commonly affects wisdom teeth but can also occur with other permanent teeth. Impacted teeth can lead to pain, swelling, infection, and misalignment of neighboring teeth, necessitating removal or other dental interventions.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Persistent pain or discomfort in the affected area of the jaw</li>
+                    <li>Swelling, redness, or tenderness of the gums around the impacted tooth</li>
+                    <li>Difficulty opening the mouth or biting down due to pressure from the impacted tooth</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Insufficient space in the jaw for the tooth to erupt properly</li>
+                    <li>Abnormal tooth positioning or alignment, such as teeth growing at an angle</li>
+                    <li>Obstruction by other teeth or tissues, preventing the impacted tooth from emerging normally</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Maintain regular dental check-ups for early detection of potential issues with tooth eruption</li>
+                    <li>Practice good oral hygiene to reduce the risk of gum disease and inflammation that could affect tooth positioning</li>
+                    <li>Consider early orthodontic evaluation and treatment to address tooth alignment issues and create sufficient space for proper tooth eruption</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwelve">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve" style="font-size: 70%;">
+                Implant
+              </button>
+            </h2>
+            <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/implant.jpg') }}" alt="implant" style="width:300px"><br><br><br>
+                <strong>Dental implants</strong> are artificial tooth roots made of biocompatible materials such as titanium, surgically placed into the jawbone to support replacement teeth or dental prostheses. They offer a permanent solution for replacing missing teeth, restoring both function and aesthetics to the smile. Dental implants integrate with the jawbone over time, providing stability and durability comparable to natural teeth.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Missing one or more teeth, causing gaps in the smile and difficulty chewing or speaking</li>
+                    <li>Loose or ill-fitting dentures or dental bridges, leading to discomfort and reduced functionality</li>
+                    <li>Jawbone deterioration or shrinkage, resulting in changes to facial appearance or difficulty wearing traditional dentures</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Tooth loss due to decay, trauma, or periodontal disease, leaving gaps that require replacement</li>
+                    <li>Wear and tear on existing dental restorations, such as bridges or dentures, leading to their failure over time</li>
+                    <li>Inadequate bone density or volume in the jaw due to aging, tooth loss, or other medical conditions, necessitating implant-supported restorations</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Maintain good oral hygiene practices to prevent tooth decay and gum disease, which are leading causes of tooth loss</li>
+                    <li>Attend regular dental check-ups for early detection and treatment of dental issues before they progress to tooth loss</li>
+                    <li>Wear protective mouthguards during sports or activities that risk dental trauma, and seek prompt treatment for any injuries to the teeth or jaw</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThirteen">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen" style="font-size: 70%;">
+                Infected Tooth
+              </button>
+            </h2>
+            <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+              <div class="card-body p-5">
+                <img src="{{ url_for('static', filename='teeth/infected.jpg') }}" alt="infected" style="width:300px"><br><br><br>
+                <strong>Infected tooth</strong>, also known as a dental abscess, occurs when bacteria invade the pulp, the innermost part of the tooth containing nerves, blood vessels, and connective tissue. This infection can lead to severe pain, swelling, and even the formation of a pus-filled pocket at the root of the tooth. Without prompt treatment, such as root canal therapy or extraction, the infection can spread to surrounding tissues and potentially cause serious complications.
+                <br><br><br>
+                  <strong>Symptoms</strong><br>
+                  <ul>
+                    <li>Severe toothache, often throbbing or constant in nature</li>
+                    <li>Swelling and tenderness in the surrounding gums or face</li>
+                    <li>Sensitivity to hot or cold temperatures, along with pain when chewing or biting down</li>
+                  </ul>
+                  <br>
+                  <strong>Causes</strong><br>
+                  <ul>
+                    <li>Untreated tooth decay that progresses to infect the inner pulp of the tooth</li>
+                    <li>Dental trauma or injury that exposes the pulp to bacteria</li>
+                    <li>Poor oral hygiene habits leading to plaque and bacteria buildup, increasing the risk of infection</li>
+                  </ul>
+                  <br>
+                  <strong>How to Prevent it</strong><br>
+                  <ul>
+                    <li>Maintain good oral hygiene practices, including brushing teeth at least twice a day and flossing daily</li>
+                    <li>Attend regular dental check-ups for professional cleanings and early detection of dental issues</li>
+                    <li>Address tooth decay promptly with fillings or other restorative treatments to prevent it from progressing to an infection</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+    </div>
+</div>
+<!--<script src="script.js"></script>-->
+</body>
+</html>
